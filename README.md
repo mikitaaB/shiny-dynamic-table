@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+## shiny-dynamic-table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Objective:** Build a search interface that queries a [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users) with debounce and animations.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Functionality:**
+ - Debounced input (300ms delay);
+ - API params: Filter by name, username, email, phone, company name;
+ - Loading state with skeleton animation;
+ - Error handling.
 
-## React Compiler
+**Animations:**
+ - Smooth list appearance;
+ - Hover effects on cards.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Responsive:**
 
-## Expanding the ESLint configuration
+Desktop: 4-column grid. \
+Mobile: 1-column list with touch-friendly buttons.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Semantics:**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+`<main> <section> <article>`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### How to setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Install Node.js: https://nodejs.org/en/ (LTS)
+2. Install all dependencies:
+   `npm install`
+
+### How to run
+
+To run the app in **development** mode:
+
+```
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app will be available at http://localhost:5173.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To run the app in **production** mode:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+npm run build
+npm run preview
+```
+
+The app will be available at http://localhost:4173.
