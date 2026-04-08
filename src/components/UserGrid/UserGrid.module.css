@@ -1,0 +1,19 @@
+.user-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .user-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

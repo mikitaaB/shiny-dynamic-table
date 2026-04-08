@@ -1,0 +1,15 @@
+.app-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.results-section {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .app-main {
+        padding: 1rem;
+    }
+}
