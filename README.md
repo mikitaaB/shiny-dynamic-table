@@ -45,4 +45,4 @@ npm run build
 npm run preview
 ```
 
-The app will be available at http://localhost:4173.
+The app will be available at http://localhost:4173/shiny-dynamic-table/.
